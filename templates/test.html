@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Stylesheet for Attendance */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://www.vidyalayaschoolsoftware.com/webassets/images/bg_attendance_management.svg");
+        }
+
+        header {
+            background-color: #000000;
+            color: #e6671d;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .attendance-section {
+            padding: 20px;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .attendance-form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .attendance-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .attendance-form input, .attendance-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        .attendance-form button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .attendance-form button:hover {
+            background-color: rgb(241, 115, 11);
+        }
+
+        h2 {
+            text-align: center;
+            color: #292626;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(224, 126, 34);
+        }
+
+        footer {
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Attendance Management - Attendance</title>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmcj95rXdbaCwG7X0dtihukqCmGK3qpVLI-A&usqp=CAU" width=50px alt="logo AM">
+</head>
+<body>
+    <header>
+        <h1>Attendance Management System</h1>
+    </header>
+    <section class="attendance-section">
+        <h3>Welcome {{name}},</h3>
+        <h2>Attendance Record</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Attendance Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in attendance_data %}
+                    <tr>
+                        <td>{{ entry.date }}</td>
+                        <td>{{ entry.attendance_status }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2><u>Mark your Attendance</u></h2>
+        <form action="#" method="post" class="attendance-form">
+            <label for="Student-id">Student ID:</label>
+            <input type="text" id="Student-id" name="employee_id" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="status">Attendance Status:</label>
+            <select id="status" name="status" required>
+                <option value="present">Present</option>
+                <option value="absent">Absent</option>
+            </select>
+
+            <button type="submit">Submit Attendance</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2k23 Attendance Organization</p>
+    </footer>
+</body>
+</html>

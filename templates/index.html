@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="main">
+        <img src="../static/images/attendance_logo.png" class="alogo">
+                
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">ATTENDance<br><span>Management</span></h2>
+            </div>s
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="{{url_for('attendence')}}">ATTENDANCE</a></li>
+                    <li><a href="{{url_for('LeaveRequest')}}">LEAVE REQUESTS</a></li>
+                    <li><a href="{{url_for('announcement')}}">ANNOUNCEMENTS</a></li>
+                    <li><a href="{{url_for('SignIn')}}">SignIn</a></li>
+                    <li><a href="{{url_for('signup')}}">SignUp</a></li>
+                </ul>
+            </div>
+            <!-- <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type to text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div> -->
+        </div>
+        <div class="content">
+            <h1>Attendance & Leave<br><span>Management</span><br>System</h1>
+            <p class="par">Using a user-friendly web and mobile interface,<br> participants can register, check their attendance.<br> The system employs advanced algorithms to ensure accuracy,<br> eliminating the need for manual data entry and reducing the risk of errors.</p>
+            <!-- <button class="cn"><a href="#">JOIN US</a></button> -->
+            <!-- <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="" placeholder="Enter Password Here">
+                <button class="btnn"><a href="#">Login</a></button>
+
+                <p class="link">Don't have an account<br>
+                <a href="#">Sign up </a> here</a></p>
+                <p class="liw">Log in with</p>
+
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+            </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
+</body>
+</html>

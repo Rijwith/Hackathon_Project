@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Registration page</title>
+    <style>
+        body {
+            background-color:rgb(212, 96, 18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Adjust to column layout */
+        }
+
+        .container {
+            width: 500px; /* You can adjust the width as needed */
+            text-align: center;
+            border: 2px solid black; /* Add a solid black border */
+            padding: 20px; /* Add some padding to make it look better */
+            box-sizing: border-box; /* Include padding in the width */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Adjust margin as needed */
+            color: #ebefec;
+        }
+
+        form {
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50; /* Green background */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Dark green background on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><u>Login</u></h1>
+        <b>{{error}}</b>
+        <form method="post">
+            <label for="Student-id"> Student-id :</label><br>
+            <input type="text" id="Student-id" name="id" placeholder="Student-id" required>
+            <br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd" placeholder="password" required>
+
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

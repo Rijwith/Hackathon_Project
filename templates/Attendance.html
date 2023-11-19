@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/stylesat.css">
+  <title>Attendance Management - Attendance</title>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmcj95rXdbaCwG7X0dtihukqCmGK3qpVLI-A&usqp=CAU" width=50px alt="logo AM">
+</head>
+<body>
+  <header>
+    <h1>Attendance Management System</h1>
+  </header>
+  <section class="attendance-section">
+    <h3>Welcome {{name}},</h3>
+    <h2><u>Attendence Record</u></h2>
+    <table>
+      <thead>
+          <tr>
+              <th>Date</th>
+              <th>Attendance Status</th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for entry in attendance_data %}
+        <tr>
+            <td>{{ entry[1] }}</td>
+            <td>{{ entry[2] }}</td>
+        </tr>
+    {% endfor %}
+        
+      </tbody>
+  </table>
+  
+    <h2><u>Mark your Attendance</u></h2>
+    <form action="http://localhost:5000/attendancesfill" method="post" class="attendance-form">
+      <label for="Student-id">Student ID:</label>
+      <input type="text" id="Student-id" name="studentId" value="{{studentId}}" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="status">Attendance Status:</label>
+      <select id="status" name="status" required>
+        <option value="Present">Present</option>
+        <option value="absent">Absent</option>
+      </select>
+
+      <button type="submit">Submit Attendance</button>
+    </form>
+
+    
+    
+  </section>
+  <footer>
+    <p>&copy; 2k23 Attendance Organization</p>
+  </footer>
+</body>
+</html>
