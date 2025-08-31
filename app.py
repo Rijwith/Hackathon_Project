@@ -30,7 +30,7 @@ def signup():
         password = request.form['pwd']
         studentId = request.form['id']
 
-        # Hash the password before storing it
+        # Hash password before storing it
         encpassword = sha256_crypt.encrypt(password)
         
         conn = get_db_connection()
